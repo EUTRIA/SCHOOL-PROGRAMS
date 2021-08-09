@@ -1,3 +1,6 @@
+Output of Queue.cpp
+
+
 /* OUTPUT
 QUEUE ONE TYPE INT
 Q1:<>
