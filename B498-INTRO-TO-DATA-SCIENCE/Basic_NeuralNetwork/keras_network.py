@@ -39,5 +39,11 @@ results = model.predict(tf.constant(X_test), verbose = 0 , steps = 1)
 result_data = list(zip(results,y_test))
 results_df = pd.DataFrame(result_data, columns= ['Predicted Output', 'Actual Output'])
 
+def accuracy(test_data, predicted_data):
+    correct = 0
+    for i in range(len(test_data)):
+        if test_data[i] == predicted_data[i]:
+            correct += 1 
+    return correct / float(len(predicted_data)) * 100
 
 print(f'Accuracy: {np.round(accuracy(y_test,np.round(results)))}%')
